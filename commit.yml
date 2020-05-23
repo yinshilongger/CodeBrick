@@ -2,10 +2,19 @@
 branches: {
   }
 fileChange:
-  /README.md:
-    newFile: !uuid 'd69f787d1060241a3cfd365f41f011883fc2a2c1'
+  /framework:
+    newFile: !uuid 'cb0c92ee4a510e35c0dfbcd9e18b2accc7343509'
     oldFile: null
-gitCommitId: !uuid '2067b62f356edb58cbd78935c6e0b19c3035e15f'
+  /framework/comdef.h:
+    newFile: !uuid '0f4aba0435274d2a30dcabc697effcdb141d884b'
+    oldFile: null
+  /framework/module.c:
+    newFile: !uuid '629eb641276ada993e977c6eab4404340c9787dd'
+    oldFile: null
+  /framework/module.h:
+    newFile: !uuid '734d33dafa4643a8a4dafac8f24af32508eb887e'
+    oldFile: null
+gitCommitId: !uuid '95044f3cff910208e0163484fb48d8fcd4e12fa3'
 renames: {
   }
-revisionId: 1
+revisionId: 2
