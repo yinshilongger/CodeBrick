@@ -3,18 +3,48 @@ branches: {
   }
 fileChange:
   /README.md:
-    newFile: !uuid '2f4f90447ee8c4ad1932bb15439d5adc6dae6c91'
-    oldFile: !uuid 'f6fb1d7219db6bfe78fb14514ee47a1a0f27f2ad'
+    newFile: !uuid 'b952bc26f46c6b9e60cdc9dabf326b0b6c8a2184'
+    oldFile: !uuid '2f4f90447ee8c4ad1932bb15439d5adc6dae6c91'
   /framework:
-    newFile: !uuid '6f45c46915376cc48a0e53aca0fca0f8d9842860'
-    oldFile: !uuid 'aee0a2ecdd1a1b4b48375e8b18a9202deaa66475'
+    newFile: !uuid 'f303e275e6841a4a69e462dec04440c6b08430c4'
+    oldFile: !uuid '6f45c46915376cc48a0e53aca0fca0f8d9842860'
+  /framework/blink.c:
+    newFile: !uuid '2afa060c34bba3d88d929424d6edba5a63831bb6'
+    oldFile: !uuid '71f78dcb4d899e67618475545eac90f871f545b6'
+  /framework/blink.h:
+    newFile: !uuid 'ed5a0992a8ea0a031ddf122714b6fc193d6c0db8'
+    oldFile: !uuid '1acbd81e637824b63d216e963746b4bf9b832488'
+  /framework/comdef.h:
+    newFile: !uuid 'b5ac26a7ebe4aaaaf5f4ccf1f3bc62509c9c1cad'
+    oldFile: !uuid '4b6147d9a551d3250af8e63c9a7e52c7d56b6014'
+  /framework/key.c:
+    newFile: !uuid '3dab1f002ad4b9507c2a25382919b4a8773ae7bf'
+    oldFile: !uuid '489a36e6c3f5206daabda2953deb3294fca672c0'
+  /framework/key.h:
+    newFile: !uuid 'f0f598c4d249c1b5a2ead03eb48bfe8ca0fa1fae'
+    oldFile: !uuid 'd08bcaf2a8115f5c6596cb2b0db2d645a70fde27'
+  /framework/module.c:
+    newFile: !uuid '4738f3d2f75d4672fe72f5bf868ec49a189f14ed'
+    oldFile: !uuid '646ef07bd7da9e9cc7f512e95e04ad9cfa9d8fae'
+  /framework/module.h:
+    newFile: !uuid '3a9b477d3680db31d85288e1dcd8ea3bda773224'
+    oldFile: !uuid '70079688bd8280b80b2ae701918b15e4b5391e9a'
+  /framework/qlink.h:
+    newFile: !uuid 'd3b24112ce98ba29cc1a9e649d03b85660fbc432'
+    oldFile: !uuid 'b30dc55138eaee3e41527c96268083fc71923185'
+  /framework/queue.c:
+    newFile: !uuid '9ba7c466cfb91d3db140b0fa857e44223e926e3d'
+    oldFile: !uuid 'd2a80d69b44f0f2669726a032b02e523e100bd93'
+  /framework/queue.h:
+    newFile: !uuid '8e75662388f9d93597b480d800d6a7764e604778'
+    oldFile: !uuid '539a24e1ed7e02da1ca67aa72764c69dacb9dc60'
   /framework/ringbuffer.c:
-    newFile: !uuid 'bef18aceeb11220306d9118f459ad7b138a5f73c'
-    oldFile: null
+    newFile: !uuid '0314e68b4702b4869b0a9eda3db81a986ee0db3a'
+    oldFile: !uuid 'bef18aceeb11220306d9118f459ad7b138a5f73c'
   /framework/ringbuffer.h:
-    newFile: !uuid '2df9943fdd449dc5494323806e026ed3fd615550'
-    oldFile: null
-gitCommitId: !uuid '5a1c12937d09e57634c6dc09eab835ad93dd170a'
+    newFile: !uuid '1b4253c203b163e83f89813654f5ed85c8c2a6c8'
+    oldFile: !uuid '2df9943fdd449dc5494323806e026ed3fd615550'
+gitCommitId: !uuid '1cc300a599500668677af56abf81711b94c0f468'
 renames: {
   }
-revisionId: 11
+revisionId: 12
