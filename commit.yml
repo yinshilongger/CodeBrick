@@ -2,16 +2,40 @@
 branches: {
   }
 fileChange:
-  /driver:
-    newFile: !uuid 'd32aacc5867e869a82b489206e153f8aa3199fb2'
-    oldFile: !uuid 'e44c4d15cbef6b054443224dfba1f2e213c3b432'
-  /driver/src:
-    newFile: !uuid 'f3c4ff35ae2d08f7da178ecaa4063c9efab17bb0'
-    oldFile: !uuid 'f915ba8c0542acb30b5503b0f9aa2d9601dff5e1'
-  /driver/src/tty.c:
-    newFile: !uuid '8cc46797f20beadfee2ea6519ff1e784bb4202b3'
-    oldFile: !uuid '36342924a8644db75eb6151f88aac0c42b0a79df'
-gitCommitId: !uuid '92fce520cb06ae247831efbb323d77436a353063'
+  /lib:
+    newFile: !uuid '92009870e7792d6e2de7fae7bb5146418ac76749'
+    oldFile: !uuid '08f4c6b28d46fdc4cd35fc55578b0792bce36fb4'
+  /lib/CMSIS:
+    newFile: !uuid 'fd6e2672db537f67818f5d7b4701f6d2fdca9c0c'
+    oldFile: !uuid 'a9a1e2852edfd0bd23fa18c12ec86b78b0896dfd'
+  /lib/CMSIS/STM32F4xx:
+    newFile: !uuid 'e8c7a2bf9a85b34c7c3cf655d9f31e3ca0618fba'
+    oldFile: !uuid '97d93c81a70fe5c9e219894cdc946a23cb3ba7b4'
+  /lib/CMSIS/STM32F4xx/Source:
+    newFile: !uuid '9555de7c371a1216d5a4ae1ba46767ced2c3a953'
+    oldFile: !uuid '8f0d862ef91c26c6240e201508048bab3efaa776'
+  /lib/CMSIS/STM32F4xx/Source/system_stm32f4xx.c:
+    newFile: !uuid '144e83f9ff45f66dfd4eb2eb9a3548a7b1690d2b'
+    oldFile: !uuid '9c31674a448e26f6ec938300e16dfd305a21c7e5'
+  /user:
+    newFile: !uuid '3ae36f00b9b7443530242173d51cafdeb1396281'
+    oldFile: !uuid '050f94f558b8411441f51e16e207a9c837280db8'
+  /user/led.c:
+    newFile: !uuid 'e026f0a2c84be81cc9b192d6518d8bdcd9317596'
+    oldFile: !uuid '633f442c44d36c460ee13017a1aa7d8c15810e1a'
+  /user/platform.c:
+    newFile: !uuid 'e2ace75f08f195042652d895d3492fa32d6b68bb'
+    oldFile: !uuid 'f4e17500b482a53b9fcbbf84187e172f707cff5d'
+  /user/platform.h:
+    newFile: !uuid 'b35424e82402752cc323b9d74349366ada630de5'
+    oldFile: !uuid 'c245710482f376665e39097257df1ce76dcd6b40'
+  /user/public.c:
+    newFile: !uuid '0009d233eb065c011f7a97b0b1e971332e0e311e'
+    oldFile: !uuid 'c6a6084825c70162f144000af737c2a0d2f39ebd'
+  /user/stm32f4xx_conf.h:
+    newFile: !uuid 'c0175a467690b9babeb2d6e4311c7f1cb9dd41fd'
+    oldFile: !uuid '0b83e4dbd495eebd65786487506acd12a708dfe3'
+gitCommitId: !uuid 'be3afe0dce863780028aca4cb21758688392e13e'
 renames: {
   }
-revisionId: 24
+revisionId: 25
