@@ -2,13 +2,298 @@
 branches: {
   }
 fileChange:
-  /LICENSE:
+  /codebrick:
     newFile: null
-    oldFile: !uuid 'ee5839968a2bf86c93283efc09d40fd050b7cfa2'
-  /README.md:
+    oldFile: !uuid '30d362f9448cc33ca3a2c433e1e2a98c12d5c199'
+  /codebrick/IAR:
     newFile: null
-    oldFile: !uuid 'fc0bf8dc86e477a6f5cafa1568ea2bf41a7ab13f'
-gitCommitId: !uuid '8fe4b656540d398249de66c21491d5ddc5009f27'
+    oldFile: !uuid '758968a5639a867b2959cee5945fb9ec1c1e7cfd'
+  /codebrick/IAR/codebrick.dep:
+    newFile: null
+    oldFile: !uuid '37810d6ba7669a2f57a1b496f57deab478c08077'
+  /codebrick/IAR/codebrick.ewd:
+    newFile: null
+    oldFile: !uuid '9d57361e545af050e462ae852920179acc702c3a'
+  /codebrick/IAR/codebrick.ewp:
+    newFile: null
+    oldFile: !uuid 'acd0ccb73c1b3aeb0b9ff5ba82a0e7bdea7dff80'
+  /codebrick/IAR/codebrick.ewt:
+    newFile: null
+    oldFile: !uuid 'aa5cbc9b1f225f3c98d7335eb12c857c95973c5d'
+  /codebrick/IAR/codebrick.eww:
+    newFile: null
+    oldFile: !uuid '59411d08b130cde5ced52daf404eb062d2ccb1a5'
+  /codebrick/IAR/stm32f401xD.icf:
+    newFile: null
+    oldFile: !uuid '60b99e9444f5dcf0d606e5699b5e574210ead6cc'
+  /codebrick/MDK:
+    newFile: null
+    oldFile: !uuid '7737016481fd9dbdf0ec0d9145d56358fd71feb2'
+  /codebrick/MDK/readme.txt:
+    newFile: null
+    oldFile: !uuid 'e69de29bb2d1d6434b8b29ae775ad8c2e48c5391'
+  /codebrick/driver:
+    newFile: null
+    oldFile: !uuid 'f3860915b4c1f18dc5d1ea606208c6dafea4ea04'
+  /codebrick/driver/inc:
+    newFile: null
+    oldFile: !uuid '9bb421b3e7b6d5db51668d9163e81b7576c036eb'
+  /codebrick/driver/inc/mcu_flash.h:
+    newFile: null
+    oldFile: !uuid 'cf3eea58ece88e8e06d85d6c64eaec981eef7f4e'
+  /codebrick/driver/inc/spi_flash.h:
+    newFile: null
+    oldFile: !uuid '8ae703aecc30884df3c9f37ce619610332b7398d'
+  /codebrick/driver/inc/tty.h:
+    newFile: null
+    oldFile: !uuid 'e59e9239a889ce8c170f34e64b0f4f31f33903d0'
+  /codebrick/driver/src:
+    newFile: null
+    oldFile: !uuid '842057f809a8bc6a1db25cde8d5f7d1a71c75876'
+  /codebrick/driver/src/mcu_flash.c:
+    newFile: null
+    oldFile: !uuid '6213ec35f74bbbf999bc4d086ab5d7381d8a353d'
+  /codebrick/driver/src/spi_flash.c:
+    newFile: null
+    oldFile: !uuid '1bddb7a964eaac8af4c0709c8bdcce9457b1b910'
+  /codebrick/driver/src/tty.c:
+    newFile: null
+    oldFile: !uuid '24f2691ced9451038c3f281224a725037c16bcfc'
+  /codebrick/framework:
+    newFile: null
+    oldFile: !uuid 'f2074fabbdc8b98fcd7b2f3147237237fbbda1b2'
+  /codebrick/framework/blink.c:
+    newFile: null
+    oldFile: !uuid '2afa060c34bba3d88d929424d6edba5a63831bb6'
+  /codebrick/framework/blink.h:
+    newFile: null
+    oldFile: !uuid 'ed5a0992a8ea0a031ddf122714b6fc193d6c0db8'
+  /codebrick/framework/comdef.h:
+    newFile: null
+    oldFile: !uuid 'ed5a1bf8419106ef3058fa59fb015766a80b869a'
+  /codebrick/framework/key.c:
+    newFile: null
+    oldFile: !uuid '3dab1f002ad4b9507c2a25382919b4a8773ae7bf'
+  /codebrick/framework/key.h:
+    newFile: null
+    oldFile: !uuid 'f0f598c4d249c1b5a2ead03eb48bfe8ca0fa1fae'
+  /codebrick/framework/module.c:
+    newFile: null
+    oldFile: !uuid 'fa2783a2ec991c43d913cf32de0adf850d3cdd88'
+  /codebrick/framework/module.h:
+    newFile: null
+    oldFile: !uuid '21ba3e766bed37df6ca55fff52542a05e17a44ac'
+  /codebrick/framework/qlink.h:
+    newFile: null
+    oldFile: !uuid 'b30dc55138eaee3e41527c96268083fc71923185'
+  /codebrick/framework/queue.c:
+    newFile: null
+    oldFile: !uuid '26e50d8dee3e77d60971232eca53e03d1d891833'
+  /codebrick/framework/queue.h:
+    newFile: null
+    oldFile: !uuid '8e75662388f9d93597b480d800d6a7764e604778'
+  /codebrick/framework/ringbuffer.c:
+    newFile: null
+    oldFile: !uuid 'b5a1e1ef6f4b180f194842e78b7da71c6e63a1f2'
+  /codebrick/framework/ringbuffer.h:
+    newFile: null
+    oldFile: !uuid '1b4253c203b163e83f89813654f5ed85c8c2a6c8'
+  /codebrick/lib:
+    newFile: null
+    oldFile: !uuid 'ccc865f94c4cb3b351193857be86bb9c6d71c9e3'
+  /codebrick/lib/CMSIS:
+    newFile: null
+    oldFile: !uuid 'a9a1e2852edfd0bd23fa18c12ec86b78b0896dfd'
+  /codebrick/lib/CMSIS/Include:
+    newFile: null
+    oldFile: !uuid '488b7876e50902cdd08b07e821fdc63981cd0269'
+  /codebrick/lib/CMSIS/Include/arm_common_tables.h:
+    newFile: null
+    oldFile: !uuid '34f910f9bafd53a88e8b9555073ba190697323a5'
+  /codebrick/lib/CMSIS/Include/arm_math.h:
+    newFile: null
+    oldFile: !uuid 'd8901db155e3a6236a23dc2b2c887c785fd95efd'
+  /codebrick/lib/CMSIS/Include/core_cm0.h:
+    newFile: null
+    oldFile: !uuid 'edd522173e1503c34f0989b60dd8a6d37dfa43d1'
+  /codebrick/lib/CMSIS/Include/core_cm3.h:
+    newFile: null
+    oldFile: !uuid 'c15e10ae2c567c19a758f652b0a1a72fd3da2e44'
+  /codebrick/lib/CMSIS/Include/core_cm4.h:
+    newFile: null
+    oldFile: !uuid '76bf8292a9718b63d48510179dd49a081ce908dd'
+  /codebrick/lib/CMSIS/Include/core_cm4_simd.h:
+    newFile: null
+    oldFile: !uuid '479188696b158d0959aebd74f6ab2f79ba9c64a5'
+  /codebrick/lib/CMSIS/Include/core_cmFunc.h:
+    newFile: null
+    oldFile: !uuid 'c999b1c83b0bd19fad57f629bcf4d510042663bb'
+  /codebrick/lib/CMSIS/Include/core_cmInstr.h:
+    newFile: null
+    oldFile: !uuid 'ceb4f8756865c2d2373e6d2866f1a3fad5b3b4d9'
+  /codebrick/lib/CMSIS/STM32F4xx:
+    newFile: null
+    oldFile: !uuid '97d93c81a70fe5c9e219894cdc946a23cb3ba7b4'
+  /codebrick/lib/CMSIS/STM32F4xx/Include:
+    newFile: null
+    oldFile: !uuid '4fd458f00f95bf715889b913b3c88aceabf93647'
+  /codebrick/lib/CMSIS/STM32F4xx/Include/stm32f4xx.h:
+    newFile: null
+    oldFile: !uuid '98ccc64dab07f5e533bbd35c1193448f3bc51cec'
+  /codebrick/lib/CMSIS/STM32F4xx/Include/system_stm32f4xx.h:
+    newFile: null
+    oldFile: !uuid '7b298509efc6020401a41c8e8e33c3b428f53e74'
+  /codebrick/lib/CMSIS/STM32F4xx/Source:
+    newFile: null
+    oldFile: !uuid '8f0d862ef91c26c6240e201508048bab3efaa776'
+  /codebrick/lib/CMSIS/STM32F4xx/Source/arm:
+    newFile: null
+    oldFile: !uuid '26c1c5707e0dff349d1dcf624a85079ae7095983'
+  /codebrick/lib/CMSIS/STM32F4xx/Source/arm/startup_stm32f4xx.s:
+    newFile: null
+    oldFile: !uuid 'a8d04e0f7e6f726b9dfab546b745d6412db37a5e'
+  /codebrick/lib/CMSIS/STM32F4xx/Source/iar:
+    newFile: null
+    oldFile: !uuid '4e7ec1a892dad7838df3af47e243f8c88eef779a'
+  /codebrick/lib/CMSIS/STM32F4xx/Source/iar/startup_stm32f4xx.s:
+    newFile: null
+    oldFile: !uuid '38e7330de85f96717f2dde5ff1e7168d501995f3'
+  /codebrick/lib/CMSIS/STM32F4xx/Source/system_stm32f4xx.c:
+    newFile: null
+    oldFile: !uuid '9c31674a448e26f6ec938300e16dfd305a21c7e5'
+  /codebrick/lib/STM32F4xx_StdPeriph_Driver:
+    newFile: null
+    oldFile: !uuid '872b5647d2a3afaa75017eeff5f7cacf97c84b26'
+  /codebrick/lib/STM32F4xx_StdPeriph_Driver/inc:
+    newFile: null
+    oldFile: !uuid '238beee1f3fcaa3079e5c8615750080c31c048f1'
+  /codebrick/lib/STM32F4xx_StdPeriph_Driver/inc/misc.h:
+    newFile: null
+    oldFile: !uuid '7a203eeb6801e9f23edeaeac19744ea6c53fc6fe'
+  /codebrick/lib/STM32F4xx_StdPeriph_Driver/inc/stm32f4xx_adc.h:
+    newFile: null
+    oldFile: !uuid 'dba848ca74f69e741126d90aef41fb361ca135ea'
+  /codebrick/lib/STM32F4xx_StdPeriph_Driver/inc/stm32f4xx_exti.h:
+    newFile: null
+    oldFile: !uuid 'bda295c424228c7a9c0f5debce2685c2be1b560a'
+  /codebrick/lib/STM32F4xx_StdPeriph_Driver/inc/stm32f4xx_flash.h:
+    newFile: null
+    oldFile: !uuid 'd1a7616cba86cc1367cfe58a302ff2f85f2964ab'
+  /codebrick/lib/STM32F4xx_StdPeriph_Driver/inc/stm32f4xx_gpio.h:
+    newFile: null
+    oldFile: !uuid '3cb99e4b21ab8d5031e6d2fc23a5cbbed82592e0'
+  /codebrick/lib/STM32F4xx_StdPeriph_Driver/inc/stm32f4xx_i2c.h:
+    newFile: null
+    oldFile: !uuid 'c782c3b956f9a00d5be9bce381d524bf776c5a94'
+  /codebrick/lib/STM32F4xx_StdPeriph_Driver/inc/stm32f4xx_iwdg.h:
+    newFile: null
+    oldFile: !uuid '103bde8227c630eb99bf354a7a7e518273f7e480'
+  /codebrick/lib/STM32F4xx_StdPeriph_Driver/inc/stm32f4xx_pwr.h:
+    newFile: null
+    oldFile: !uuid '6bc0404362cdd243932a0708a887f14d9f6844a4'
+  /codebrick/lib/STM32F4xx_StdPeriph_Driver/inc/stm32f4xx_rcc.h:
+    newFile: null
+    oldFile: !uuid '378185646ea49df1b064b8ca6040dbb5ab864352'
+  /codebrick/lib/STM32F4xx_StdPeriph_Driver/inc/stm32f4xx_rtc.h:
+    newFile: null
+    oldFile: !uuid '94ffb658164b618f2f191c0dfb03d4d5906467c9'
+  /codebrick/lib/STM32F4xx_StdPeriph_Driver/inc/stm32f4xx_spi.h:
+    newFile: null
+    oldFile: !uuid '095b63a1f2e9cb1959561ac23752e0b2185f1e48'
+  /codebrick/lib/STM32F4xx_StdPeriph_Driver/inc/stm32f4xx_syscfg.h:
+    newFile: null
+    oldFile: !uuid '98eed9b70def2f748f5c7a96c9ae18be05d3a1ee'
+  /codebrick/lib/STM32F4xx_StdPeriph_Driver/inc/stm32f4xx_tim.h:
+    newFile: null
+    oldFile: !uuid 'a136f88207340f9883406da0eb15a8346db2c483'
+  /codebrick/lib/STM32F4xx_StdPeriph_Driver/inc/stm32f4xx_usart.h:
+    newFile: null
+    oldFile: !uuid '3a411228f769bf31ff8cd7aa13447929445815e2'
+  /codebrick/lib/STM32F4xx_StdPeriph_Driver/src:
+    newFile: null
+    oldFile: !uuid 'c758302fc229709633f4c31f22fad360e03e0c5e'
+  /codebrick/lib/STM32F4xx_StdPeriph_Driver/src/misc.c:
+    newFile: null
+    oldFile: !uuid '19fba01394a59f9873c13300f655362ef71045c5'
+  /codebrick/lib/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_exti.c:
+    newFile: null
+    oldFile: !uuid '4b9b4b32faa302a908dbbf8db78d580a38159e84'
+  /codebrick/lib/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_flash.c:
+    newFile: null
+    oldFile: !uuid '0aea3bd1ad444f87ea5486beeb9ae63f7303e9c6'
+  /codebrick/lib/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_fsmc.c:
+    newFile: null
+    oldFile: !uuid 'cf03940256c7da85c4ee510934895dd15a7e3830'
+  /codebrick/lib/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_gpio.c:
+    newFile: null
+    oldFile: !uuid 'c932947e25bba6dd66e78a5f3acf657d3179ce67'
+  /codebrick/lib/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_iwdg.c:
+    newFile: null
+    oldFile: !uuid '7c6afc722df4673e3992675bc10ea951841104a9'
+  /codebrick/lib/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_pwr.c:
+    newFile: null
+    oldFile: !uuid '5afbd8c1df799c8c67d44f98b232b7ea354e02c0'
+  /codebrick/lib/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_rcc.c:
+    newFile: null
+    oldFile: !uuid '229f24d3bfcd12b75e45903999b2871923681d89'
+  /codebrick/lib/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_rtc.c:
+    newFile: null
+    oldFile: !uuid 'c1af02bdbd51ac0532c340f5c9a47c384d5dac78'
+  /codebrick/lib/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_spi.c:
+    newFile: null
+    oldFile: !uuid 'c01f321dd18135986f232b382585fc07cdaa7a53'
+  /codebrick/lib/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_syscfg.c:
+    newFile: null
+    oldFile: !uuid 'fb81e76eb8554d33ab92e9f09b7c1beff5c893a7'
+  /codebrick/lib/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_tim.c:
+    newFile: null
+    oldFile: !uuid '78848e51aa15d30c7dc9ab3ab1f2ca00c4822041'
+  /codebrick/lib/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_usart.c:
+    newFile: null
+    oldFile: !uuid 'f2333d0bbdc7798c18e325660f3ec9d5fe323055'
+  /codebrick/user:
+    newFile: null
+    oldFile: !uuid 'bfe9b3316fa7497d0be3ca1aed503e7b222af614'
+  /codebrick/user/config.h:
+    newFile: null
+    oldFile: !uuid '27955baf3b7024a120c9bcbb15ec393bec37fd34'
+  /codebrick/user/led.c:
+    newFile: null
+    oldFile: !uuid '633f442c44d36c460ee13017a1aa7d8c15810e1a'
+  /codebrick/user/led.h:
+    newFile: null
+    oldFile: !uuid '0fc7322a209ab32b661ef78932c30216f75d4513'
+  /codebrick/user/main.c:
+    newFile: null
+    oldFile: !uuid '9be26c86c9432f3db526eebfbca02ba0afb0a346'
+  /codebrick/user/module:
+    newFile: null
+    oldFile: !uuid 'ce229adaac5b89692580b281693be80473478382'
+  /codebrick/user/module/keywork.c:
+    newFile: null
+    oldFile: !uuid '58bc2cab92056a225701b0ccee2bb92f448fdea5'
+  /codebrick/user/platform.c:
+    newFile: null
+    oldFile: !uuid '9cb572c7d977b719dd619b7c7717610318542a67'
+  /codebrick/user/platform.h:
+    newFile: null
+    oldFile: !uuid 'c245710482f376665e39097257df1ce76dcd6b40'
+  /codebrick/user/public.c:
+    newFile: null
+    oldFile: !uuid '75723cc5342d600c790ebb6fb553f533c2bc3761'
+  /codebrick/user/public.h:
+    newFile: null
+    oldFile: !uuid 'abab07752169b85325906f9b006f8bd8cc3a31fa'
+  /codebrick/user/stm32f4xx_conf.h:
+    newFile: null
+    oldFile: !uuid '0b83e4dbd495eebd65786487506acd12a708dfe3'
+  /codebrick/user/stm32f4xx_it.c:
+    newFile: null
+    oldFile: !uuid 'ad94dffe1099a47178a56c4fa3aa3c76d0f13fde'
+  /codebrick/user/stm32f4xx_it.h:
+    newFile: null
+    oldFile: !uuid '2031f8f665d0b0ca37cc9162179dbaf8b753cf8e'
+gitCommitId: !uuid 'f9b60ab0cebb5d26cadb3dbb43fcc012f1b89557'
 renames: {
   }
-revisionId: 18
+revisionId: 19
