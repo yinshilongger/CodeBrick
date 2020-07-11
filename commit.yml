@@ -2,40 +2,10 @@
 branches: {
   }
 fileChange:
-  /lib:
-    newFile: !uuid '92009870e7792d6e2de7fae7bb5146418ac76749'
-    oldFile: !uuid '08f4c6b28d46fdc4cd35fc55578b0792bce36fb4'
-  /lib/CMSIS:
-    newFile: !uuid 'fd6e2672db537f67818f5d7b4701f6d2fdca9c0c'
-    oldFile: !uuid 'a9a1e2852edfd0bd23fa18c12ec86b78b0896dfd'
-  /lib/CMSIS/STM32F4xx:
-    newFile: !uuid 'e8c7a2bf9a85b34c7c3cf655d9f31e3ca0618fba'
-    oldFile: !uuid '97d93c81a70fe5c9e219894cdc946a23cb3ba7b4'
-  /lib/CMSIS/STM32F4xx/Source:
-    newFile: !uuid '9555de7c371a1216d5a4ae1ba46767ced2c3a953'
-    oldFile: !uuid '8f0d862ef91c26c6240e201508048bab3efaa776'
-  /lib/CMSIS/STM32F4xx/Source/system_stm32f4xx.c:
-    newFile: !uuid '144e83f9ff45f66dfd4eb2eb9a3548a7b1690d2b'
-    oldFile: !uuid '9c31674a448e26f6ec938300e16dfd305a21c7e5'
-  /user:
-    newFile: !uuid '3ae36f00b9b7443530242173d51cafdeb1396281'
-    oldFile: !uuid '050f94f558b8411441f51e16e207a9c837280db8'
-  /user/led.c:
-    newFile: !uuid 'e026f0a2c84be81cc9b192d6518d8bdcd9317596'
-    oldFile: !uuid '633f442c44d36c460ee13017a1aa7d8c15810e1a'
-  /user/platform.c:
-    newFile: !uuid 'e2ace75f08f195042652d895d3492fa32d6b68bb'
-    oldFile: !uuid 'f4e17500b482a53b9fcbbf84187e172f707cff5d'
-  /user/platform.h:
-    newFile: !uuid 'b35424e82402752cc323b9d74349366ada630de5'
-    oldFile: !uuid 'c245710482f376665e39097257df1ce76dcd6b40'
-  /user/public.c:
-    newFile: !uuid '0009d233eb065c011f7a97b0b1e971332e0e311e'
-    oldFile: !uuid 'c6a6084825c70162f144000af737c2a0d2f39ebd'
-  /user/stm32f4xx_conf.h:
-    newFile: !uuid 'c0175a467690b9babeb2d6e4311c7f1cb9dd41fd'
-    oldFile: !uuid '0b83e4dbd495eebd65786487506acd12a708dfe3'
-gitCommitId: !uuid 'be3afe0dce863780028aca4cb21758688392e13e'
+  /makeclean.bat:
+    newFile: !uuid '1d37d16e9df70e2b5edeb9276e6b213ef0148890'
+    oldFile: null
+gitCommitId: !uuid 'd184522523a9e778f876b86f766441547c9c92bd'
 renames: {
   }
-revisionId: 25
+revisionId: 26
