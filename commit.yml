@@ -2,10 +2,31 @@
 branches: {
   }
 fileChange:
-  /makeclean.bat:
-    newFile: !uuid '1d37d16e9df70e2b5edeb9276e6b213ef0148890'
-    oldFile: null
-gitCommitId: !uuid 'd184522523a9e778f876b86f766441547c9c92bd'
+  /iar:
+    newFile: !uuid '29ccd31b0a54a851914f8c4392023b9f9f3e2445'
+    oldFile: !uuid '5205bc4796ab7ea1a3bdef7d0a7ea29124814a49'
+  /iar/codebrick.dep:
+    newFile: !uuid '81f16f2813884818a515b003c8c81a5578020958'
+    oldFile: !uuid '9d916e8190178680661d25d5ceb979f600957fca'
+  /iar/codebrick.ewp:
+    newFile: !uuid '25c729895c972aa0f31079ff243418e6d5f0557f'
+    oldFile: !uuid '1a8b889ee39b3f2f917706dd9012db0f94c743c5'
+  /mdk:
+    newFile: !uuid 'd276f6c8cac635b91b001dad510df26ce2646505'
+    oldFile: !uuid '560c25a8832b65b4e63730820c4595a4c05f64ff'
+  /mdk/codebrick_codebrick.dep:
+    newFile: !uuid '8eda8721d7f4f583c501f60a723ad4d9c56895a3'
+    oldFile: !uuid 'e4b91968edd4f6b4a362e9d97a19cfbec5c836e3'
+  /user:
+    newFile: !uuid '4e04f0d1e52d095b8d704f2eea8496064d3e1fb2'
+    oldFile: !uuid '3ae36f00b9b7443530242173d51cafdeb1396281'
+  /user/config.h:
+    newFile: !uuid '19cb8c2b112a1a325a7564b715e47990eaa24a7d'
+    oldFile: !uuid 'db7780af1791a3e6801bf328edc48016dfe0dbf1'
+  /user/platform.c:
+    newFile: !uuid 'b005c74ca202924400fae10fde327a7f02d149b2'
+    oldFile: !uuid 'e2ace75f08f195042652d895d3492fa32d6b68bb'
+gitCommitId: !uuid 'f3d3232d2524ade72ffdcabb26c9e63266603cbf'
 renames: {
   }
-revisionId: 26
+revisionId: 27
