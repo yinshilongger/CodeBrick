@@ -2,76 +2,16 @@
 branches: {
   }
 fileChange:
-  /README.md:
-    newFile: !uuid '051760038b3e48b9c0ab4687af2dafeb87849a95'
-    oldFile: !uuid 'fc0bf8dc86e477a6f5cafa1568ea2bf41a7ab13f'
   /framework:
-    newFile: !uuid '30526e9fa85a41ce1d9de9a4b48bf9c0cd59120c'
-    oldFile: !uuid 'f2074fabbdc8b98fcd7b2f3147237237fbbda1b2'
-  /framework/blink.c:
-    newFile: !uuid '1d1af1ef4060e9d8286b386e919702ada89406a7'
-    oldFile: !uuid '2afa060c34bba3d88d929424d6edba5a63831bb6'
-  /framework/cli.c:
-    newFile: !uuid 'accc5b334fd658e2a4a62256a9761a5e923cc673'
+    newFile: !uuid '061fc1e2ea39a37c4a90dd0337f21e1f62dbb25e'
+    oldFile: !uuid '30526e9fa85a41ce1d9de9a4b48bf9c0cd59120c'
+  /framework/async_work.c:
+    newFile: !uuid '09402a48b853265484a880c2e8a9658dc66038d6'
     oldFile: null
-  /framework/cli.h:
-    newFile: !uuid 'a5c8f07574307611a8c5c9255a8bc2a7515e0615'
+  /framework/async_work.h:
+    newFile: !uuid '0b1b538c015d19492be83c96bca05e0274decd57'
     oldFile: null
-  /framework/module.h:
-    newFile: !uuid '791dded33b4ffa3eb1437fe62e29cdc09484d991'
-    oldFile: !uuid '21ba3e766bed37df6ca55fff52542a05e17a44ac'
-  /iar:
-    newFile: !uuid 'f9b92310c94ff65800253e6d9de2dc67b2d2d90a'
-    oldFile: !uuid '29ccd31b0a54a851914f8c4392023b9f9f3e2445'
-  /iar/codebrick.dep:
-    newFile: !uuid 'db41f2dce757f22f4949fc3cf5b6c729c8fa2adb'
-    oldFile: !uuid '81f16f2813884818a515b003c8c81a5578020958'
-  /iar/codebrick.ewp:
-    newFile: !uuid '1166d8e52d172992bb412f003806d0a5c90e3f4b'
-    oldFile: !uuid '25c729895c972aa0f31079ff243418e6d5f0557f'
-  /iar/codebrick.ewt:
-    newFile: !uuid '70b0ded4d88d128e52cb9b36043b94a0831fc1c3'
-    oldFile: !uuid 'a5b60907b1d40b86e1eb481166a346236bb4d869'
-  /mdk:
-    newFile: !uuid 'e47095c8560bad1544b252c7aa198e0d0e0895ea'
-    oldFile: !uuid 'd276f6c8cac635b91b001dad510df26ce2646505'
-  /mdk/codebrick.uvopt:
-    newFile: !uuid '51fc39241c403a345cfd469a47fc500b51fe17f7'
-    oldFile: !uuid 'df822991c6b9b67961e6b590feb7baa89bf50733'
-  /mdk/codebrick.uvproj:
-    newFile: !uuid 'ba1b8a1c8788c41dd7b030d317f61056006a23d9'
-    oldFile: !uuid '5c63ec38e358c25757e9243077bd72b5c1b43c9d'
-  /mdk/codebrick_codebrick.dep:
-    newFile: !uuid '39df337b7b67e420f43613f55f8d3e868579a0e0'
-    oldFile: !uuid '8eda8721d7f4f583c501f60a723ad4d9c56895a3'
-  /user:
-    newFile: !uuid 'd9b3feb9a34cdd8751e89dc198adbe48ae4a10d2'
-    oldFile: !uuid '4e04f0d1e52d095b8d704f2eea8496064d3e1fb2'
-  /user/cmd:
-    newFile: !uuid '5e8dbf4ea2d45cc33c2a4ccd0cbfe13836edd601'
-    oldFile: null
-  /user/cmd/cmd_devinfo.c:
-    newFile: !uuid 'f3e44cd8aac19f75ce29f511212b18792d808e4c'
-    oldFile: null
-  /user/main.c:
-    newFile: !uuid 'e9d5a5ee65475b1e5ff6fa374f0424e81703505e'
-    oldFile: !uuid '84deab243f71810278ef0a4c4f063742d061c678'
-  /user/module:
-    newFile: null
-    oldFile: !uuid 'ce229adaac5b89692580b281693be80473478382'
-  /user/module/keywork.c:
-    newFile: null
-    oldFile: !uuid '58bc2cab92056a225701b0ccee2bb92f448fdea5'
-  /user/task:
-    newFile: !uuid 'a691893e3bc3a8290063705595c00dca99609e6a'
-    oldFile: null
-  /user/task/cli_task.c:
-    newFile: !uuid '4c018d23bc3c538e72e2608aae5faf0e58e97f41'
-    oldFile: null
-  /user/task/task_key.c:
-    newFile: !uuid '58bc2cab92056a225701b0ccee2bb92f448fdea5'
-    oldFile: null
-gitCommitId: !uuid '030676ebebf4f4bac9c8dc287139cd4e24384e3f'
-renames:
-  /user/task/task_key.c: /user/module/keywork.c
-revisionId: 28
+gitCommitId: !uuid '11828db7c6ab1b95f9a30659b91a2447b3fc6b37'
+renames: {
+  }
+revisionId: 29
