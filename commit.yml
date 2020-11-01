@@ -2,22 +2,10 @@
 branches: {
   }
 fileChange:
-  /framework:
-    newFile: !uuid '2a5a568f2c2e3e5b83bf2d2858976d146c0c398a'
-    oldFile: !uuid 'f6f99e8c5d14309af7d320dd9a40d5124ca56efa'
-  /framework/cli.c:
-    newFile: !uuid '882ca666947182aba17a4dc5e8c9ac2e845c8385'
-    oldFile: !uuid 'accc5b334fd658e2a4a62256a9761a5e923cc673'
-  /makeclean.bat:
-    newFile: !uuid 'b251803f0799782956497adbb66d453c3c28e7a4'
-    oldFile: !uuid '1d37d16e9df70e2b5edeb9276e6b213ef0148890'
-  /user:
-    newFile: !uuid '3d964b4e72b43673f0a0d26b0a273a0af3ac145a'
-    oldFile: !uuid 'd9b3feb9a34cdd8751e89dc198adbe48ae4a10d2'
-  /user/platform.c:
-    newFile: !uuid '9b50a7e4736d11317b65c6309ff464adbca8eaf7'
-    oldFile: !uuid 'b005c74ca202924400fae10fde327a7f02d149b2'
-gitCommitId: !uuid '650b92c9c7d2a441623c4c67de44ab9f50177f54'
+  /README.md:
+    newFile: !uuid 'faf73fb37feb20855a5245b98d5f1df8d12b7379'
+    oldFile: !uuid '051760038b3e48b9c0ab4687af2dafeb87849a95'
+gitCommitId: !uuid '62ef383004aa1e8a517a0d6d2ab27f2e31e21d6d'
 renames: {
   }
-revisionId: 31
+revisionId: 32
