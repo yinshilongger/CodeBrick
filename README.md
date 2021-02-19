@@ -8,7 +8,7 @@
  
 1.使用此模块前需要系统提供滴答定时器，用于驱动任务轮询作业
 
-```
+```c
 //定时器中断(提供系统滴答)
 void timer_interrupt(void)
 {
@@ -17,7 +17,7 @@ void timer_interrupt(void)
 ```
 2.任务初始化及注册(以按键扫描为例)
 
-```
+```c
 static void key_init(void)
 {
     /*do something*/
@@ -37,12 +37,12 @@ task_register("key", key_scan, 20);      //注册按键任务(20ms轮询1次)
  
 1. 定义命令行管理器
 
-```
+```c
 static cli_obj_t cli;                               /*命令行对象 */
 ```
 2.命令行初始化及接口适配
 
-```
+```c
 /* 
  * @brief       命令行任务初始化
  * @return      none
@@ -59,7 +59,7 @@ module_init("cli", cli_task_init);
 ```
 
 3.命令行任务轮询
-```
+```c
 /* 
  * @brief       命令行任务处理
  * @return      none
@@ -81,7 +81,7 @@ task_register("cli", cli_task_process, 10);       /*注册命令行任务*/
 - 需要系统提供滴答时钟，blick.c中是通过get_tick()接口获取，依赖module模块
 - 需要在任务中定时进行轮询
 
-```
+```c
 //主程序入口
 void main(void)
 {
@@ -93,11 +93,11 @@ void main(void)
 ```
 或者通过"module"模块的任务注册来实现
 
-```
+```c
 task_register("blink", blink_dev_process, 50);  //50ms轮询1次
 ```
 ***使用例子,以LED为例***
-```
+```c
 blink_dev_t led;                             //定义led设备
 
 /*
@@ -130,7 +130,7 @@ void led_init(void)
 - 需要系统提供滴答时钟，key.c中是通过get_tick()接口获取，依赖module模块
 - 需要在任务中定时进行轮询
 
-```
+```c
 key_t key;                             //定义按键管理器
 
 /*
