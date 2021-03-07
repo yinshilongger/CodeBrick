@@ -7,7 +7,7 @@
  *
  * Change Logs: 
  * Date           Author       Notes 
- * 2021-01-17     Morro        Initial version. 
+ * 2021-03-02     Morro        Initial version. 
  ******************************************************************************/
 #ifndef _PM_H_
 #define _PM_H_
@@ -26,20 +26,20 @@ typedef struct {
     const char *name;                      
     /**
      * @brief   当前设备工作状态(只有所有的pm_item_t都允许休眠,系统才能休眠)
+     * @note    如果填NULL,则表示允许系统休眠
      * @retval  true - 空闲状态允许休眠,false - 正常模式,不允许休眠
      */
     bool   (*idle)(void);
     /**
-     * @brief      挂起设备
-     * @param[out] next_wakup_time - 下次唤醒时间
-     * @retval     唤醒时间(单位:ms, 0 - 表示由于系统决定)
+     * @brief      休眠通知
+     * @retval     下次唤醒时间(单位:ms, 0 - 表示由于系统决定)
      */    
-    void  (*suspend)(unsigned int *next_wakup_time);
+    unsigned int  (*sleep_notify)(void);
     /**
-     * @brief   恢复
+     * @brief     唤醒通知
      * @retval  none
      */    
-    void  (*resume)(void);
+    void  (*wakeup_notify)(void);
 }pm_item_t;
 
 /*低功耗适配器 ---------------------------------------------------------------*/
@@ -52,24 +52,32 @@ typedef struct {
      * @brief     进入休眠状态
      * @param[in] time - 期待休眠时长(ms)
      * @retval    实际休眠时长
+     * @note      休眠之后需要考虑两件事情,1个是需要定时起来给喂看门狗,否则会在休眠
+     *            期间发送重启.另外一件事情是需要补偿休眠时间给系统滴答时钟,否则会
+     *            造成时间不准。
      */     
-    void (*goto_sleep)(unsigned int time);
+    unsigned int (*goto_sleep)(unsigned int time);
 }pm_adapter_t;
 
 /**
  * @brief     功耗管理项注册
  * @param[in] name    - 项目名称
- * @param[in] idle    - 指示设备是否空闲
- * @param[in] suspend - 系统休眠通知
- * @param[in] resume  - 唤醒通知
+ * @param[in] idle    - 指示设备是否空闲,如果填NULL,则表示允许系统休眠
+ * @param[in] sleep_notify   - 休眠通知,不需要则填NULL
+ * @param[in] wakeup_notify  - 唤醒通知,不需要则填NULL
  */ 
-#define pm_dev_register(name, idle, suspend, resume)\
-__pm_item_register(name, idle, suspend, resume)
+#define pm_dev_register(name, idle, sleep_notify, wakeup_notify)\
+__pm_item_register(name, idle, sleep_notify, wakeup_notify)
 
 
 void pm_init(const pm_adapter_t *adt);
+
+void pm_enable(void);
+
+void pm_disable(void);
 
 void pm_process(void);
 
 
 #endif
+

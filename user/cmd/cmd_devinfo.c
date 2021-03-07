@@ -27,7 +27,7 @@ static int do_sysinfo_handler(struct cli_obj *o, int argc, char *argv[])
     printf("|  | Project Name :        CODEBRICK                        | |\r\n");
     printf("|  |--------------------------------------------------------| |\r\n");
     printf("|  | Author      :  Morro                                   | |\r\n");
-    printf("|  | Contact     :  <morro_luo@163.com>                 | |\r\n");
+    printf("|  | Contact     :  <morro_luo@163.com>                     | |\r\n");
     printf("|  |                                                        | |\r\n");
     printf("|  |                               Oooo                     | |\r\n");  
     printf("|  +---------------------- oooO---(   )---------------------+ |\r\n");

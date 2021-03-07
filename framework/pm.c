@@ -7,19 +7,24 @@
  *
  * Change Logs: 
  * Date           Author       Notes 
- * 2021-01-17     Morro        Initial version. 
+ * 2021-03-02     Morro        Initial version. 
  ******************************************************************************/
 #include "pm.h"
 #include <stddef.h>
 
 /**
- * @brief   pm控制器
- */ 
-static const pm_adapter_t *pm_ctrl;
+ * @brief   pm监视器
+ */
+typedef struct {
+    const pm_adapter_t *adt;  
+    bool  enable;
+}pm_watch_t;
 
-static const pm_item_t pm_tbl_start SECTION("init.item.0");
+static pm_watch_t pm_watch;
 
-static const pm_item_t pm_tbl_end SECTION("init.item.2");
+static const pm_item_t pm_tbl_start SECTION("pm.item.0");
+
+static const pm_item_t pm_tbl_end SECTION("pm.item.2");
 
 /*
  * @brief  系统空闲检测
@@ -28,7 +33,7 @@ static bool system_is_idle(void)
 {
     const pm_item_t *it;
     for (it = &pm_tbl_start + 1; it < &pm_tbl_end; it++) {
-        if (!it->idle())
+        if (it->idle != NULL && !it->idle())
             return false;
     }
     return true;
@@ -39,26 +44,31 @@ static bool system_is_idle(void)
  */
 static void system_goto_sleep(void)
 {
-    const pm_item_t *it;
+    const pm_item_t   *it;
+    const pm_adapter_t *adt;
+    unsigned int sleep_time;
     unsigned int tmp;
-    unsigned int sleep_time = pm_ctrl->max_sleep_time;
+    
+    adt = pm_watch.adt;
+    
+    sleep_time = adt->max_sleep_time;
     
     //休眠处理
     for (it = &pm_tbl_start + 1; it < &pm_tbl_end; it++) {
-        if (it->suspend == NULL)
+        if (it->sleep_notify == NULL)
             continue;
-        it->suspend(&tmp);                 //挂起设备,并得到设备期待下次唤醒时间
-        if (tmp < sleep_time)              //计算出所有设备中的最小允许休眠时间
+        tmp = it->sleep_notify();          //休眠请求,并得到设备期待下次唤醒时间
+        if (tmp && tmp < sleep_time)       //计算出所有设备中的最小允许休眠时间
             sleep_time = tmp;
     }
     
-    pm_ctrl->goto_sleep(sleep_time);
+    adt->goto_sleep(sleep_time);
     
     //唤醒处理
     for (it = &pm_tbl_start + 1; it < &pm_tbl_end; it++) {
-        if (it->resume == NULL)
+        if (it->wakeup_notify == NULL)
             continue;
-        it->resume();
+        it->wakeup_notify();
     }
 }
 
@@ -68,7 +78,25 @@ static void system_goto_sleep(void)
  */
 void pm_init(const pm_adapter_t *adt)
 {
-    pm_ctrl = adt;
+    pm_watch.adt = adt;
+}
+
+/**
+ * @brief   启动功耗管理
+ * @retval  none
+ */
+void pm_enable(void)
+{
+    pm_watch.enable = true;
+}
+
+/**
+ * @brief   禁用功耗管理
+ * @retval  none
+ */
+void pm_disable(void)
+{
+    pm_watch.enable = false;
 }
 
 /**
@@ -77,7 +105,7 @@ void pm_init(const pm_adapter_t *adt)
  */
 void pm_process(void)
 {
-    if (!system_is_idle())
+    if (!pm_watch.enable || !system_is_idle())
         return;
     system_goto_sleep();
 }

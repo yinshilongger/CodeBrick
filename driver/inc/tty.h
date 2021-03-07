@@ -7,7 +7,8 @@
  *
  * Change Logs: 
  * Date           Author       Notes 
- * 2015-07-03     Morro
+ * 2015-07-03     Morro        初版
+ * 2021-03-07     Morro        增加发送缓冲区空判断
  ******************************************************************************/
 
 #ifndef	_TTY_H_
@@ -22,6 +23,7 @@ typedef struct {
     unsigned int (*write)(const void *buf, unsigned int len);    
     unsigned int (*read)(void *buf, unsigned int len);           
     bool (*tx_isfull)(void);                                    /*发送缓冲区满*/
+    bool (*tx_isempty)(void);                                   /*发送缓冲区空*/
     bool (*rx_isempty)(void);                                   /*接收缓冲区空*/
 }tty_t;
 

@@ -114,3 +114,24 @@ void uart_conf(USART_TypeDef *port, int baudrate)
 	USART_Cmd(port, ENABLE);      
 
 }
+
+/* 
+ * @brief       看门狗配置
+ * @param[in]   Tout  - 喂狗超时时间(ms)
+ * @return      none
+ */
+void wdog_conf(unsigned int Tout)
+{
+    IWDG_WritERR_ACCESSCmd(IWDG_WritERR_ACCESS_Enable);
+
+    IWDG_SetPrescaler(IWDG_Prescaler_256);
+    //LSI = 40 Khz
+    //Tout=(256×reload) / 40
+    IWDG_SetReload(Tout * 40 / 256);
+
+    IWDG_ReloadCounter();
+
+    IWDG_Enable();
+    
+    IWDG_WritERR_ACCESSCmd(IWDG_WritERR_ACCESS_Disable);
+}

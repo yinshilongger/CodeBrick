@@ -8,6 +8,7 @@
  * Change Logs: 
  * Date           Author       Notes 
  * 2019-04-01     Morro        Initial version
+ * 2021-03-07     Morro        增加忙判断接口
  ******************************************************************************/
 #ifndef _BLINK_H_
 #define _BLINK_H_
@@ -33,6 +34,8 @@ typedef struct blink_dev {
 void blink_dev_create(blink_dev_t *dev, void (*ioctrl)(bool enable));
 
 void blink_dev_ctrl(blink_dev_t *dev, int ontime, int offtime, int repeat);
+
+bool blink_dev_busy(blink_dev_t *dev);
 
 void blink_dev_process(void);
 

@@ -89,7 +89,7 @@
         </option>
         <option>
           <name>OGChipSelectEditMenu</name>
-          <state>STM32F405VG	ST STM32F405VG</state>
+          <state>STM32F401xD	ST STM32F401xD</state>
         </option>
         <option>
           <name>GenLowLevelInterface</name>
@@ -149,7 +149,7 @@
         </option>
         <option>
           <name>GFPUDeviceSlave</name>
-          <state>STM32F405VG	ST STM32F405VG</state>
+          <state>STM32F401xD	ST STM32F401xD</state>
         </option>
         <option>
           <name>FPU2</name>
@@ -731,7 +731,7 @@
         </option>
         <option>
           <name>IlinkIcfFile</name>
-          <state>$TOOLKIT_DIR$\config\linker\ST\stm32f405xG.icf</state>
+          <state>$TOOLKIT_DIR$\config\linker\ST\stm32f401xD.icf</state>
         </option>
         <option>
           <name>IlinkIcfFileSlave</name>
@@ -1942,6 +1942,9 @@
       <name>$PROJ_DIR$\..\framework\module.c</name>
     </file>
     <file>
+      <name>$PROJ_DIR$\..\framework\pm.c</name>
+    </file>
+    <file>
       <name>$PROJ_DIR$\..\framework\queue.c</name>
     </file>
     <file>
@@ -2006,6 +2009,9 @@
       <file>
         <name>$PROJ_DIR$\..\user\cmd\cmd_devinfo.c</name>
       </file>
+      <file>
+        <name>$PROJ_DIR$\..\user\cmd\cmd_pm.c</name>
+      </file>
     </group>
     <group>
       <name>task</name>
@@ -2013,7 +2019,7 @@
         <name>$PROJ_DIR$\..\user\task\cli_task.c</name>
       </file>
       <file>
-        <name>$PROJ_DIR$\..\user\task\task_key.c</name>
+        <name>$PROJ_DIR$\..\user\task\key_task.c</name>
       </file>
     </group>
     <file>
@@ -2026,7 +2032,13 @@
       <name>$PROJ_DIR$\..\user\main.c</name>
     </file>
     <file>
+      <name>$PROJ_DIR$\..\user\platform - lowpower.c</name>
+    </file>
+    <file>
       <name>$PROJ_DIR$\..\user\platform.c</name>
+      <excluded>
+        <configuration>Debug</configuration>
+      </excluded>
     </file>
     <file>
       <name>$PROJ_DIR$\..\user\public.c</name>

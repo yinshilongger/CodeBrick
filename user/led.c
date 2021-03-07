@@ -13,56 +13,57 @@
 #include "module.h"
 #include "public.h"
 #include "led.h"
+#include <stddef.h>
 
 static blink_dev_t led[LED_TYPE_MAX];               /*定义led设备 ------------*/
 
 /* 
- * @brief       红色LED控制(PB4)
+ * @brief       红色LED控制(PD4)
  * @return      none
  */ 
 static void red_led_ctrl(bool level)
 {
     if (level)
-        GPIOC->ODR |= 1 << 4;
+        GPIOD->ODR |= 1 << 4;
     else 
-        GPIOC->ODR &= ~(1 << 4);
+        GPIOD->ODR &= ~(1 << 4);
 }
 
 /* 
- * @brief       绿色LED控制(PB5)
+ * @brief       绿色LED控制(PD5)
  * @return      none
  */ 
 static void green_led_ctrl(bool level)
 {
     if (level)
-        GPIOC->ODR |= 1 << 5;
+        GPIOD->ODR |= 1 << 5;
     else 
-        GPIOC->ODR &= ~(1 << 5);    
+        GPIOD->ODR &= ~(1 << 5);    
 }
 
 /* 
- * @brief       蓝色LED控制(PB6)
+ * @brief       蓝色LED控制(PD6)
  * @return      none
  */ 
 static void blue_led_ctrl(bool level)
 {
     if (level)
-        GPIOB->ODR |= 1 << 6;
+        GPIOD->ODR |= 1 << 6;
     else 
-        GPIOB->ODR &= ~(1 << 6);    
+        GPIOD->ODR &= ~(1 << 6);    
 }
 /* 
  * @brief       led io初始化
- *              PB4 -> red; PB5 -> green; PB6-> blue;
+ *              PD4 -> red; PD5 -> green; PD6-> blue;
  * @return      none
  */ 
 static void led_io_init(void)
 {
-    RCC_AHB1PeriphClockCmd(RCC_AHB1Periph_GPIOB , ENABLE);
+    RCC_AHB1PeriphClockCmd(RCC_AHB1Periph_GPIOD , ENABLE);
     
-    gpio_conf(GPIOB, GPIO_Mode_OUT, GPIO_PuPd_NOPULL, GPIO_Pin_4);
-    gpio_conf(GPIOB, GPIO_Mode_OUT, GPIO_PuPd_NOPULL, GPIO_Pin_5);
-    gpio_conf(GPIOB, GPIO_Mode_OUT, GPIO_PuPd_NOPULL, GPIO_Pin_6);
+    gpio_conf(GPIOD, GPIO_Mode_OUT, GPIO_PuPd_NOPULL, GPIO_Pin_4);
+    gpio_conf(GPIOD, GPIO_Mode_OUT, GPIO_PuPd_NOPULL, GPIO_Pin_5);
+    gpio_conf(GPIOD, GPIO_Mode_OUT, GPIO_PuPd_NOPULL, GPIO_Pin_6);
     
     blink_dev_create(&led[LED_TYPE_RED], red_led_ctrl);
     blink_dev_create(&led[LED_TYPE_GREEN], green_led_ctrl);
@@ -74,6 +75,8 @@ static void led_io_init(void)
     led_ctrl(LED_TYPE_BLUE, LED_MODE_FAST, 3);
     
 }
+
+
 
 /* 
  * @brief       led控制
@@ -109,3 +112,20 @@ void led_ctrl(led_type type, int mode, int reapeat)
 
 driver_init("led", led_io_init);                     /*驱动初始化*/
 task_register("led", blink_dev_process, 10);         /*led任务, 10ms轮询1次*/
+
+
+/* 低功耗管理 -----------------------------------------------------------------*/
+#include "pm.h"
+
+/*
+ * @brief	   休眠通知
+ */
+static unsigned int  led_sleep_notify(void)
+{
+    int i;
+    for (i = 0; i < LED_TYPE_MAX; i++)
+        if (blink_dev_busy(&led[i]))
+            return 100;                               //如果有设备活动,最低100ms唤醒1次           
+            
+    return 0;
+} pm_dev_register("led", NULL, led_sleep_notify, NULL);

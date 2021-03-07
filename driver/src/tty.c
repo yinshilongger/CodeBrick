@@ -7,14 +7,13 @@
  *
  * Change Logs: 
  * Date           Author       Notes 
- *
+ * 2015-07-03     Morro        ≥ı∞Ê
  ******************************************************************************/
 #include "stm32f4xx.h"
 #include "ringbuffer.h"
 #include "tty.h"
-#include "public.h"
+#include "public.h"   
 #include <string.h>
-
 #if (TTY_RXBUF_SIZE & (TTY_RXBUF_SIZE - 1)) != 0 
     #error "TTY_RXBUF_SIZE must be power of 2!"
 #endif
@@ -50,7 +49,7 @@ static void uart_init(int baudrate)
     uart_conf(USART1, baudrate);                    /*¥Æø⁄≈‰÷√*/
     
     nvic_conf(USART1_IRQn, 1, 1);
-
+    
 }
 
 /*
@@ -85,6 +84,12 @@ static bool tx_isfull(void)
     return ring_buf_len(&rbsend) == TTY_TXBUF_SIZE;
 }
 
+/*∑¢ÀÕª∫≥Â«¯ø’*/
+bool tx_isempty(void)
+{
+    return ring_buf_len(&rbsend) == 0;
+}
+
 /*Ω” ’ª∫≥Â«¯ø’*/
 bool rx_isempty(void)
 {
@@ -97,6 +102,7 @@ const tty_t tty = {
     uart_write,
     uart_read,
     tx_isfull,
+    tx_isempty,
     rx_isempty
 };
 

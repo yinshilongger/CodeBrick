@@ -60,6 +60,15 @@ void blink_dev_ctrl(blink_dev_t *dev, int ontime, int offtime, int repeats)
 }
 
 /*
+ * @brief	   忙判断
+ */
+bool blink_dev_busy(blink_dev_t *dev)
+{
+    return dev->ontime;
+}
+
+
+/*
  * @brief       blink设备管理
  * @param[in]   none
  * @return      none
@@ -75,7 +84,7 @@ void blink_dev_process(void)
                 dev->enable = true;
                 dev->ioctrl(true);
             }
-        } else if(get_tick() - dev->tick < dev->offtime) {    /**/
+        } else if(get_tick() - dev->tick < dev->offtime) {   
             if (dev->enable) {
                 dev->enable = false;
                 dev->ioctrl(false);
@@ -92,3 +101,4 @@ void blink_dev_process(void)
         }
     }
 }
+

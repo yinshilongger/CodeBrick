@@ -22,4 +22,7 @@ void timer_conf(TIM_TypeDef* TIMx, unsigned int hz);
 
 void uart_conf(USART_TypeDef *port, int baudrate);
 
+
+void wdog_conf(unsigned int Tout);
+
 #endif

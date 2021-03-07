@@ -1,5 +1,5 @@
 /******************************************************************************
- * @brief    平台相关初始化
+ * @brief    平台相关初始化(无低功耗管理)
  *
  * Copyright (c) 2020, <morro_luo@163.com>
  *
@@ -38,7 +38,7 @@ int fputc(int c, FILE *f)
 /*
  * @brief	   硬件驱动初始化
  * @param[in]   none
- * @return 	   none
+ * @return 	    none
  */
 static void bsp_init(void)
 {    
@@ -46,6 +46,14 @@ static void bsp_init(void)
     tty.init(115200);
     SystemCoreClockUpdate();
  	SysTick_Config(SystemCoreClock / (1000 / SYS_TICK_INTERVAL));   //配置系统时钟
-	NVIC_SetPriority(SysTick_IRQn, 0);
-    
+	NVIC_SetPriority(SysTick_IRQn, 0);    
+    wdog_conf(MAX_DOG_FEED_TIME);                       //初始化看门狗
 }system_init("bsp", bsp_init); 
+
+/*
+ * @brief	   喂狗任务
+ */
+static void wdog_task(void)
+{
+    IWDG_ReloadCounter();
+}task_register("dog", wdog_task, 1000);

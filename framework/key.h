@@ -8,6 +8,7 @@
  * Change Logs: 
  * Date           Author       Notes 
  * 2017-08-10     Morro        Initial version
+ * 2021-03-07     Morro        增加忙判断接口
  ******************************************************************************/
 
 #ifndef _KEY_H_
@@ -47,6 +48,9 @@ typedef struct key_t {
 
 bool key_create(key_t *key, int (*readkey)(void),  /*创建按键*/
                void (*event)(int type, unsigned int duration));
+
+bool key_busy(key_t *k);                           /*忙判断*/
+
 void key_scan_process(void);                       /*按键扫描处理*/
 
 #ifdef __cplusplus

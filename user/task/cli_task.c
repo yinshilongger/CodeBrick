@@ -13,7 +13,7 @@
 #include "tty.h"
 #include "cli.h"
 
-static cli_obj_t cli;                               /*命令行对象 */
+static cli_obj_t cli;                               /*命令管理器对象 */
 
 /* 
  * @brief       命令行任务初始化
