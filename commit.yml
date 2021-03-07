@@ -2,130 +2,25 @@
 branches: {
   }
 fileChange:
-  /README.md:
-    newFile: !uuid '39f037fb445b5fd048633349531ba8801a87c827'
-    oldFile: !uuid '92408d22e1d95f630f487600b138af269483608b'
-  /driver:
-    newFile: !uuid '51b8894e6dcac96ab3f43304adaa45c4c248d868'
-    oldFile: !uuid '0be8fcb11e1e7eabf53deab1efe17b4de76e266b'
-  /driver/inc:
-    newFile: !uuid '07b655f027bc0ec70e563d5a6a5ad4791812e6fc'
-    oldFile: !uuid '32af6359ef6f3649e375fa9e55b978ad33b8250c'
-  /driver/inc/tty.h:
-    newFile: !uuid '36f9c43f80663a58ab2ce7cf4606e6e2cb68ed65'
-    oldFile: !uuid '90456be0f64ce1b4cc7eaa76752bc76cca6eac4a'
-  /driver/src:
-    newFile: !uuid '4752196c492c862e8ae6346182bc08e783b0c196'
-    oldFile: !uuid 'e9094119647a7909b90055581d896f832440f88d'
-  /driver/src/tty.c:
-    newFile: !uuid '82e6112d5b997e485d1abc43af9bec2c370ba0d4'
-    oldFile: !uuid '802faca6f9bfeca7a87d82273948930e116bce52'
-  /framework:
-    newFile: !uuid '340920d57b6f6b4335ed9abf3e860c01867d2a75'
-    oldFile: !uuid '74288de45af1ec81daaced9f67228630af8144e5'
-  /framework/blink.c:
-    newFile: !uuid '68f4a6483adb49bdae614e2b0d3bc9f9acfc4a71'
-    oldFile: !uuid '1ce7398741ee8a2f8e37548b0bf391b530e743bf'
-  /framework/blink.h:
-    newFile: !uuid '3b4b8e6412ff300cfcbf9f024496acef2dc5e8b4'
-    oldFile: !uuid 'a835eeb8c1d0f5d7bb232ce613751bd89797f052'
-  /framework/key.c:
-    newFile: !uuid 'fd6bfa3b9f2e8f4fcf0ed857b8c64d018564dc2f'
-    oldFile: !uuid '839eee1daaa20184daf55aa7b5b8e70935099a1a'
-  /framework/key.h:
-    newFile: !uuid 'd716a5b78b5cc4e7992b523e1807ddc70de1e4af'
-    oldFile: !uuid '6b019312a03d5ac83be884a40fe813d29609d819'
-  /framework/pm.c:
-    newFile: !uuid 'c02e16a03e412c0488d8bcb9dd93c061ecf1dc73'
-    oldFile: !uuid '0149ec88d5351e38d460c622fed6d40a975bb198'
-  /framework/pm.h:
-    newFile: !uuid 'dce33fcef2af470fc4f95b0a4e5db2568f61d47f'
-    oldFile: !uuid 'f435379e4a26002f3325069ee6aebb5daf58c833'
   /iar:
-    newFile: !uuid 'a34af862469ffccf7641fa7bf8d4e65472b671ff'
-    oldFile: !uuid '51c1c9873f74919d6f792b19314e5b5a3b0b6540'
-  /iar/codebrick.ewd:
-    newFile: !uuid '2612870d0beae080cf5866862c8ab58c1e188186'
-    oldFile: !uuid '7368127d259262b7680396c57324ee70b5a3be89'
-  /iar/codebrick.ewp:
-    newFile: !uuid 'fd7750a767d58f1c069f0b05ed983217de4bb716'
-    oldFile: !uuid '1166d8e52d172992bb412f003806d0a5c90e3f4b'
-  /iar/codebrick.ewt:
-    newFile: !uuid '6920457acd2790c5a8708e557b0fd4514e1f7697'
-    oldFile: !uuid '70b0ded4d88d128e52cb9b36043b94a0831fc1c3'
-  /lib:
-    newFile: !uuid '37e58c8b3148d27deaaa62cb327ad5cd3de74266'
-    oldFile: !uuid '92009870e7792d6e2de7fae7bb5146418ac76749'
-  /lib/STM32F4xx_StdPeriph_Driver:
-    newFile: !uuid '8b26e3bd89c317ea069232d74a7ccdc5dedb2457'
-    oldFile: !uuid '22d7ca3d988ed6aed49ba6503fac7710e176042d'
-  /lib/STM32F4xx_StdPeriph_Driver/inc:
-    newFile: !uuid 'c08a158f173cae66a542f81989493aa55bae76d8'
-    oldFile: !uuid '238beee1f3fcaa3079e5c8615750080c31c048f1'
-  /lib/STM32F4xx_StdPeriph_Driver/inc/stm32f4xx_dbgmcu.h:
-    newFile: !uuid '61ca3211bfe5e978134a196e6315d8c1f9a97cd7'
-    oldFile: null
-  /lib/STM32F4xx_StdPeriph_Driver/src:
-    newFile: !uuid '31bf3f04a62b58a6e31973e074bb6462490ef599'
-    oldFile: !uuid '0999b826ea7d26f4ee2abea6324cb5c77a8b92ea'
-  /lib/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_dbgmcu.c:
-    newFile: !uuid '2a5b06a321b7ef3ee76e45e868d739678cee2fe8'
-    oldFile: null
-  /mdk:
-    newFile: !uuid '41fc9cf8fe68107b0cfa55f37094e1d25eec0bc0'
-    oldFile: !uuid 'e47095c8560bad1544b252c7aa198e0d0e0895ea'
-  /mdk/codebrick.uvproj:
-    newFile: !uuid '90edf8456f456799a9b06c8c05a2308493ef4b0a'
-    oldFile: !uuid 'ba1b8a1c8788c41dd7b030d317f61056006a23d9'
-  /user:
-    newFile: !uuid '4ad694d69f899589970b09843f998540c846fc3d'
-    oldFile: !uuid 'adce20a2330ec3403f97cd5fbf24001c4c663fce'
-  /user/cmd:
-    newFile: !uuid '06f670b86dfe3700f3f9d883662d45f3fd4f1152'
-    oldFile: !uuid '32b2fc11687d1ff8eb5bd29a8bf4b4d35173cf40'
-  /user/cmd/cmd_devinfo.c:
-    newFile: !uuid 'fde25f57acc004344a2317e80f6d6a9b3a708337'
-    oldFile: !uuid 'bfb14710c2f8ea5ee308eabe2c1db607d0c044c9'
-  /user/cmd/cmd_pm.c:
-    newFile: !uuid 'b5041a8a1b4ab42124df3f827d046f3ad2e75e63'
-    oldFile: null
-  /user/led.c:
-    newFile: !uuid 'a2004a642f4f258b90b90396ce808360abe19386'
-    oldFile: !uuid 'b99a630bb94aed1a0f5a4584e5f5df752f85cd7b'
-  /user/platform - lowpower.c:
-    newFile: !uuid 'f296c72ceab6aa38776d8a8afd4f7e86c7b6d39b'
-    oldFile: null
-  /user/platform.c:
-    newFile: !uuid 'e6b98b43de7930ea61311290a5e0552d1cc6fc36'
-    oldFile: !uuid 'ec186e1a7258843ca41776679fd12acbcee84034'
-  /user/platform.h:
-    newFile: !uuid '19c4a366ab5a2e05ea03334b9a45a155ccc895b5'
-    oldFile: !uuid '568369ba9bf1d94d68d26da30be33887a51c85ea'
-  /user/public.c:
-    newFile: !uuid '13da0c50498c892d5851dc7195b5de56f1057cef'
-    oldFile: !uuid '085aa7797f0bbf474cbe9b6f1f49d1d663b88e8d'
-  /user/public.h:
-    newFile: !uuid 'cc1cf34605a8f4ed71080e80920fce90a9e204dc'
-    oldFile: !uuid '45820a3fc23636979e3eb0121b626fa4ba016a9e'
-  /user/stm32f4xx_conf.h:
-    newFile: !uuid 'daadf7f2e22a62aec42516d2a4fc8c3d043370d4'
-    oldFile: !uuid 'c0175a467690b9babeb2d6e4311c7f1cb9dd41fd'
-  /user/task:
-    newFile: !uuid 'fb9ac0127b2b12d8a23add91052a71c6948ff5d3'
-    oldFile: !uuid 'ac7641407f13446e3e4d87ca512183c530536424'
-  /user/task/cli_task.c:
-    newFile: !uuid '8a56cdbf54e8996ee37250087d5ba21832931c0a'
-    oldFile: !uuid '7bfb6734db856d3e064036646a96868835b519a0'
-  /user/task/key_task.c:
-    newFile: !uuid 'b164f7c58ef9045eaf8ad05a96061bd5aaa4e5ae'
-    oldFile: null
-  /user/task/pm_task.c:
-    newFile: !uuid '0c88498fc7d60e1587c2757f040cf6d7d0e90191'
-    oldFile: null
-  /user/task/task_key.c:
+    newFile: !uuid '87ff2a0c98fe18d79980bf7302e3ec42f1519d8a'
+    oldFile: !uuid 'a34af862469ffccf7641fa7bf8d4e65472b671ff'
+  /iar/codebrick.dep:
     newFile: null
-    oldFile: !uuid 'e23bc807922cff3d358b34e116b6c181ee000617'
-gitCommitId: !uuid 'f118ab8e6baf8d2d0a6aec1e273d41abed4e9b84'
+    oldFile: !uuid '2d21f3bb90b74517746d7844a2c837c7a6b00c22'
+  /iar/codebrick.ewp:
+    newFile: !uuid 'ff686654840e42b9b19216966ce8397997dd1253'
+    oldFile: !uuid 'fd7750a767d58f1c069f0b05ed983217de4bb716'
+  /mdk:
+    newFile: !uuid '1a3f15fb153dd890b0d1fb9db5ad154d69171abf'
+    oldFile: !uuid '41fc9cf8fe68107b0cfa55f37094e1d25eec0bc0'
+  /mdk/codebrick.uvopt:
+    newFile: null
+    oldFile: !uuid '51fc39241c403a345cfd469a47fc500b51fe17f7'
+  /mdk/codebrick_codebrick.dep:
+    newFile: null
+    oldFile: !uuid '39df337b7b67e420f43613f55f8d3e868579a0e0'
+gitCommitId: !uuid '27145714d43a75b99c97963e5e157f0ab10c58e0'
 renames: {
   }
-revisionId: 37
+revisionId: 38
