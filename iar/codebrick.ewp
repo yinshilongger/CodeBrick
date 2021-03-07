@@ -2033,12 +2033,12 @@
     </file>
     <file>
       <name>$PROJ_DIR$\..\user\platform - lowpower.c</name>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\..\user\platform.c</name>
       <excluded>
         <configuration>Debug</configuration>
       </excluded>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\user\platform.c</name>
     </file>
     <file>
       <name>$PROJ_DIR$\..\user\public.c</name>
