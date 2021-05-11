@@ -77,7 +77,7 @@ bool async_work_add(async_work_t *w, void *object, void *params,
     if (n == NULL)
         return false;
     n->object = object;
-    n->params = params;l;;;;;;;;;;;;;;;;;;;;;,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+    n->params = params;
     n->work   = work;
     
     workqueue_put(&w->ready, n);               /*加入到就绪链表*/          
