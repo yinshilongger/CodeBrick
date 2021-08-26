@@ -1,5 +1,5 @@
 /******************************************************************************
- * @brief    ç³»ç»Ÿæ¨¡å—ç®¡ç†(åŒ…å«ç³»ç»Ÿåˆå§‹åŒ–,æ—¶é—´ç‰‡è½®è¯¢ç³»ç»Ÿ)
+ * @brief    ÏµÍ³Ä£¿é¹ÜÀí(°üº¬ÏµÍ³³õÊ¼»¯,Ê±¼äÆ¬ÂÖÑ¯ÏµÍ³)
  *
  * Copyright (c) 2017~2020, <morro_luo@163.com>
  *
@@ -7,19 +7,19 @@
  *
  * Change Logs: 
  * Date           Author       Notes 
- * 2016-06-24     Morro        åˆç‰ˆå®Œæˆ
- * 2020-05-23     Morro        å¢åŠ åŒ¿åç±»å‹,é˜²æ­¢æ¨¡å—é‡åé”™è¯¯
- * 2020-06-28     Morro        å¢åŠ is_timeoutè¶…æ—¶åˆ¤æ–­æ¥å£
- * 2020-09-28     Morro        è§£å†³ä¼ªä»»åŠ¡é¡¹æœªåˆå§‹åŒ–timerï¼Œå¯¼è‡´å¼•ç”¨äº†ç©ºæŒ‡é’ˆçš„é—®é¢˜ï¼
+ * 2016-06-24     Morro        ³õ°æÍê³É
+ * 2020-05-23     Morro        Ôö¼ÓÄäÃûÀàĞÍ,·ÀÖ¹Ä£¿éÖØÃû´íÎó
+ * 2020-06-28     Morro        Ôö¼Óis_timeout³¬Ê±ÅĞ¶Ï½Ó¿Ú
+ * 2020-09-28     Morro        ½â¾öÎ±ÈÎÎñÏîÎ´³õÊ¼»¯timer£¬µ¼ÖÂÒıÓÃÁË¿ÕÖ¸ÕëµÄÎÊÌâ£¡
  *                             
  ******************************************************************************/
 #include "module.h"
 
 
-static volatile unsigned int tick;               //ç³»ç»Ÿæ»´ç­”è®¡æ—¶
+static volatile unsigned int tick;               //ÏµÍ³µÎ´ğ¼ÆÊ±
 
 /*
- * @brief   å¢åŠ ç³»ç»ŸèŠ‚æ‹æ•°(å®šæ—¶å™¨ä¸­æ–­ä¸­è°ƒç”¨,1ms 1æ¬¡)
+ * @brief   Ôö¼ÓÏµÍ³½ÚÅÄÊı(¶¨Ê±Æ÷ÖĞ¶ÏÖĞµ÷ÓÃ,1ms 1´Î)
  */
 void systick_increase(unsigned int ms)
 {
@@ -27,7 +27,7 @@ void systick_increase(unsigned int ms)
 }
 
 /*
- * @brief       è·å–ç³»ç»Ÿæ»´ç­”æ—¶é’Ÿå€¼(é€šå¸¸å•ä½æ˜¯1ms)
+ * @brief       »ñÈ¡ÏµÍ³µÎ´ğÊ±ÖÓÖµ(Í¨³£µ¥Î»ÊÇ1ms)
  */
 unsigned int get_tick(void)
 {
@@ -35,9 +35,9 @@ unsigned int get_tick(void)
 }
 
 /*
- * @brief       è¶…æ—¶åˆ¤æ–­
- * @param[in]   start   - èµ·å§‹æ—¶é—´
- * @param[in]   timeout - è¶…æ—¶æ—¶é—´(ms)
+ * @brief       ³¬Ê±ÅĞ¶Ï
+ * @param[in]   start   - ÆğÊ¼Ê±¼ä
+ * @param[in]   timeout - ³¬Ê±Ê±¼ä(ms)
  */
 bool is_timeout(unsigned int start, unsigned int timeout)
 {
@@ -45,31 +45,31 @@ bool is_timeout(unsigned int start, unsigned int timeout)
 }
 
 /*
- * @brief       ç©ºå¤„ç†,ç”¨äºå®šä½æ®µå…¥å£
+ * @brief       ¿Õ´¦Àí,ÓÃÓÚ¶¨Î»¶ÎÈë¿Ú
  */
 static void nop_process(void) {}
     
-//ç¬¬ä¸€ä¸ªåˆå§‹åŒ–é¡¹
+//µÚÒ»¸ö³õÊ¼»¯Ïî
 const init_item_t init_tbl_start SECTION("init.item.0") = {     
     "", nop_process
 };
-//æœ€åä¸ªåˆå§‹åŒ–é¡¹
+//×îºó¸ö³õÊ¼»¯Ïî
 const init_item_t init_tbl_end SECTION("init.item.4") = {       
     "", nop_process
 };
 
-//ç¬¬ä¸€ä¸ªä»»åŠ¡é¡¹
+//µÚÒ»¸öÈÎÎñÏî
 const task_item_t task_tbl_start SECTION("task.item.0") = {     
     "", nop_process
 };
-//æœ€åä¸ªä»»åŠ¡é¡¹
+//×îºó¸öÈÎÎñÏî
 const task_item_t task_tbl_end SECTION("task.item.2") = {       
     "", nop_process
 };
 
 /*
- * @brief       æ¨¡å—åˆå§‹å¤„ç†
- *              åˆå§‹åŒ–æ¨¡å—ä¼˜åŒ–çº§ system_init > driver_init > module_init
+ * @brief       Ä£¿é³õÊ¼´¦Àí
+ *              ³õÊ¼»¯Ä£¿éÓÅ»¯¼¶ system_init > driver_init > module_init
  * @param[in]   none
  * @return      none
  */
@@ -82,7 +82,7 @@ void module_task_init(void)
 }
 
 /*
- * @brief       ä»»åŠ¡è½®è¯¢å¤„ç†
+ * @brief       ÈÎÎñÂÖÑ¯´¦Àí
  * @param[in]   none
  * @return      none
  */
