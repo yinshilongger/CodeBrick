@@ -613,9 +613,9 @@
               <FilePath>..\user\task\cli_task.c</FilePath>
             </File>
             <File>
-              <FileName>task_key.c</FileName>
+              <FileName>key_task.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\user\task\task_key.c</FilePath>
+              <FilePath>..\user\task\key_task.c</FilePath>
             </File>
           </Files>
         </Group>
