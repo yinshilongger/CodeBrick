@@ -7,11 +7,13 @@
  *
  * Change Logs: 
  * Date           Author       Notes 
-* 2015-06-09      Morro        初版
-*                             
-* 2017-07-04      Morro        优化字段分割处理
-* 
-* 2020-07-05      Morro        使用cli_obj_t对象, 支持多个命令源处理
+ * 2015-06-09      Morro        初版
+ *                             
+ * 2017-07-04      Morro        优化字段分割处理
+ * 
+ * 2020-07-05      Morro        使用cli_obj_t对象, 支持多个命令源处理
+ *
+ * 2021-08-30      Morro        解决缓冲区满之后收不到新数据的问题
  ******************************************************************************/
 #include "cli.h"
 #include <string.h>
@@ -87,6 +89,7 @@ static void cli_print(cli_obj_t *obj, const char *format, ...)
 	char buf[CLI_MAX_CMD_LEN + CLI_MAX_CMD_LEN / 2];
 	va_start (args, format);
 	len = vsnprintf (buf, sizeof(buf), format, args);
+	va_end (args);
     obj->write(buf, len);
 }
 
@@ -159,8 +162,7 @@ void cli_exec_cmd(cli_obj_t *obj, const char *cmd)
  * @return      none
  **/
 void cli_process(cli_obj_t *obj)
-{
-    
+{    
     int i;
     if (!obj->read || !obj->enable)
         return;
@@ -174,6 +176,8 @@ void cli_process(cli_obj_t *obj)
         }
         i++;
     }
+    if (obj->recvcnt >= CLI_MAX_CMD_LEN) /*缓冲区满之后强制清空*/
+        obj->recvcnt = 0;
 }
 
 
@@ -207,8 +211,9 @@ static int do_help (struct cli_obj *s, int argc, char *argv[])
         }
         return 0;
     }
-    for (i = 0; i < item_end - item_start && i < CLI_MAX_CMDS; i++)
+    for (i = 0; i < item_end - item_start && i < CLI_MAX_CMDS; i++) {
         cmdtbl[i] = &item_start[i];
+	}
     count = i;
     /*对命令进行排序 ---------------------------------------------------------*/
     qsort(cmdtbl, i, sizeof(cmd_item_t*), cmd_item_comparer);    		        
