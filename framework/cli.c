@@ -207,7 +207,7 @@ static int do_help (struct cli_obj *s, int argc, char *argv[])
         }
         return 0;
     }
-    for (i = 0; i < item_end - item_start && i < CLI_MAX_ARGS; i++)
+    for (i = 0; i < item_end - item_start && i < CLI_MAX_CMDS; i++)
         cmdtbl[i] = &item_start[i];
     count = i;
     /*¶ÔÃüÁî½øÐÐÅÅÐò ---------------------------------------------------------*/
