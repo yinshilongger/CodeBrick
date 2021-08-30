@@ -2,13 +2,13 @@
 branches: {
   }
 fileChange:
-  /mdk:
-    newFile: !uuid '2a3e54d17bb619c6cd638fcdccc71b366b532b83'
-    oldFile: !uuid '1a3f15fb153dd890b0d1fb9db5ad154d69171abf'
-  /mdk/codebrick.uvproj:
-    newFile: !uuid '0e0d6ea05da13347b85898070fe58a649ad8764c'
-    oldFile: !uuid '90edf8456f456799a9b06c8c05a2308493ef4b0a'
-gitCommitId: !uuid 'e9807286d2dca7726cbc52b9faf8b2a87c209057'
+  /framework:
+    newFile: !uuid 'd9bb0499fbbad18ea28fc4a6b939d22ea71725b8'
+    oldFile: !uuid 'd61cfeb085bd4a524bc3ff01f3a7b4d90b208f6a'
+  /framework/cli.c:
+    newFile: !uuid '64060ad8e0a17fda10f58cd02ee46efde7e127ff'
+    oldFile: !uuid 'b3c195a98974f9fbc91501388bd97a586131df52'
+gitCommitId: !uuid '138f8d49f4da5af3224eed589a720a86a43cf917'
 renames: {
   }
-revisionId: 40
+revisionId: 41
