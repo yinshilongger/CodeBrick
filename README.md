@@ -289,3 +289,25 @@ void key_init(void)
 }
 
 ```
+
+### GCC下使用说明
+由于代码中使用了一些自定义段功能，没有直接显式调用，使用GCC时会被优化掉，所以需要在链接脚本（.lds）下添加保留这些段的声明：
+```c
+  .custom_sesion:
+  {   
+
+    KEEP (*(SORT(init.item.*)))    
+    KEEP (*(SORT(task.item.*)))    
+    KEEP (*(SORT(pm.item.*)))    
+    KEEP (*(SORT(cli.cmd.*)))  
+  }  
+```
+其中，.custom_sesion表示自定义段名称，KEEP表示保留该代码段，SORT表示对代码段进行排序，方便程序查找。
+
+对于一般在MCU项目都有链接脚本，而如果是类似LINUX的通用应用程序，链接时用得是默认链接脚本，这种情况下如何处理呢？
+
+以GCC为例，可以通过ld程序打开后复制出来，然后保存到.lds文件中，如在linux终端下输入：
+
+ld -verb
+
+打印出来的就是默认链接脚本，将其复制出现保存成文件(xxx.lds)接着在makefile引用(通常是LDFLAGS += -Txxx.lds)
